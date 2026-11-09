@@ -1,0 +1,10 @@
+# cwd: /home/zhukeyu/crate-fnv/fnv
+# cmd: env PATH=/home/zhukeyu/verus-0.2026.10.04/verus-x86-linux:/home/zhukeyu/.local/bin:/home/zhukeyu/.vscode-server/cli/servers/Stable-6d62b1d5dace93a33b3a6d3eca1317bd5e15bcb1/server/bin/remote-cli:/home/zhukeyu/.local/bin:/home/zhukeyu/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin cargo verus verify
+# date: 2026-11-04T22:50:16Z
+
+warning: Cargo.toml: `package.edition` is unspecified, defaulting to `2015` while the latest is `2024`
+warning: `fnv` (manifest) generated 1 warning
+    Checking fnv v1.0.7 (/home/zhukeyu/crate-fnv/fnv)
+verification results:: 8 verified, 0 errors
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.60s
+# exit: 0
