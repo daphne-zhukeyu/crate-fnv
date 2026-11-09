@@ -66,7 +66,7 @@ diff: `upstream.diff`. Earlier write-up with spec rationale and intent decisions
 - Both specs make the same choices on the open points: FNV-1a order, `with_key` as the raw state,
   first byte first, multiply modulo 2^64.
 
-## Caveats that belong in any honest version of this report
+## Caveats
 
 - "Verified" means the code meets Claude's spec. The spec's correctness rests on the published
   FNV-1a test vectors it reproduces and on its equivalence with the independently written gold spec.
