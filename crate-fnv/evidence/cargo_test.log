@@ -1,0 +1,33 @@
+# cwd: /home/zhukeyu/crate-fnv/fnv
+# cmd: cargo test
+# date: 2026-11-04T22:48:56Z
+
+warning: Cargo.toml: `package.edition` is unspecified, defaulting to `2015` while the latest is `2024`
+warning: `fnv` (manifest) generated 1 warning
+   Compiling fnv v1.0.7 (/home/zhukeyu/crate-fnv/fnv)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.14s
+     Running unittests lib.rs (target/debug/deps/fnv-b5ec86e399ec051c)
+
+running 1 test
+test test::basic_tests ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/doc_findings.rs (target/debug/deps/doc_findings-08058dba4cc1c6ed)
+
+running 3 tests
+test d2_variant_is_fnv1a_not_fnv1 ... ok
+test d1_with_key_is_raw_state_and_default_is_offset_basis ... ok
+test d3_integer_writes_use_native_endian_bytes ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests fnv
+
+running 2 tests
+test lib.rs - (line 51) ... ok
+test lib.rs - (line 30) ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+# exit: 0

@@ -1,0 +1,263 @@
+// WARNING: This output format is intended for human consumers only
+// and is subject to change without notice. Knock yourself out.
+// HINT: See also -Z dump-mir for MIR at specific points during compilation.
+fn <impl at lib.rs:113:1: 113:27>::default() -> FnvHasher {
+    let mut _0: FnvHasher;
+
+    bb0: {
+        _0 = const FnvHasher(14695981039346656037_u64);
+        return;
+    }
+}
+
+fn <impl at lib.rs:124:1: 124:15>::with_key(_1: u64) -> FnvHasher {
+    debug key => _1;
+    let mut _0: FnvHasher;
+
+    bb0: {
+        _0 = FnvHasher(copy _1);
+        return;
+    }
+}
+
+fn <impl at lib.rs:136:1: 136:26>::finish(_1: &FnvHasher) -> u64 {
+    debug self => _1;
+    let mut _0: u64;
+
+    bb0: {
+        _0 = copy ((*_1).0: u64);
+        return;
+    }
+}
+
+fn <impl at lib.rs:136:1: 136:26>::write(_1: &mut FnvHasher, _2: &[u8]) -> () {
+    debug self => _1;
+    debug bytes => _2;
+    let mut _0: ();
+    let mut _3: u64;
+    let mut _4: std::slice::Iter<'_, u8>;
+    let mut _5: std::option::Option<&u8>;
+    let mut _7: u64;
+    let mut _8: u64;
+    let mut _9: u8;
+    let mut _10: u64;
+    let mut _11: FnvHasher;
+    scope 1 {
+        debug hash => _3;
+        scope 2 {
+            debug iter => _4;
+            let _6: &u8;
+            scope 3 {
+                debug byte => _6;
+                scope 35 (inlined core::num::<impl u64>::wrapping_mul) {
+                }
+            }
+            scope 17 (inlined <std::slice::Iter<'_, u8> as Iterator>::next) {
+                let _21: std::ptr::NonNull<u8>;
+                let mut _23: bool;
+                let _24: std::ptr::NonNull<u8>;
+                let mut _25: std::ptr::NonNull<u8>;
+                let _26: &u8;
+                scope 18 {
+                    let _22: *const u8;
+                    scope 19 {
+                        scope 20 {
+                            scope 23 (inlined #[track_caller] core::num::<impl usize>::unchecked_sub) {
+                                scope 24 (inlined ub_checks::check_language_ub) {
+                                    scope 25 (inlined ub_checks::check_language_ub::runtime) {
+                                    }
+                                }
+                            }
+                            scope 26 (inlined without_provenance_mut::<u8>) {
+                            }
+                        }
+                        scope 21 (inlined std::ptr::const_ptr::<impl *const u8>::addr) {
+                            scope 22 (inlined std::ptr::const_ptr::<impl *const u8>::cast::<()>) {
+                            }
+                        }
+                        scope 27 (inlined <NonNull<u8> as PartialEq>::eq) {
+                            let mut _27: *mut u8;
+                            let mut _28: *mut u8;
+                            scope 28 (inlined NonNull::<u8>::as_ptr) {
+                            }
+                            scope 29 (inlined NonNull::<u8>::as_ptr) {
+                            }
+                        }
+                        scope 30 (inlined NonNull::<u8>::add) {
+                            let mut _29: *mut u8;
+                            scope 31 (inlined NonNull::<u8>::as_ptr) {
+                            }
+                        }
+                        scope 32 (inlined NonNull::<u8>::as_ref::<'_>) {
+                            let _30: *const u8;
+                            scope 33 (inlined NonNull::<u8>::as_ptr) {
+                            }
+                            scope 34 (inlined std::ptr::mut_ptr::<impl *mut u8>::cast_const) {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        scope 4 (inlined core::slice::<impl [u8]>::iter) {
+            scope 5 (inlined std::slice::Iter::<'_, u8>::new) {
+                let _12: usize;
+                let mut _14: std::ptr::NonNull<[u8]>;
+                let mut _16: *mut u8;
+                let mut _17: *mut u8;
+                scope 6 {
+                    let _13: std::ptr::NonNull<u8>;
+                    scope 7 {
+                        let _15: *const u8;
+                        scope 8 {
+                        }
+                        scope 12 (inlined std::ptr::without_provenance::<u8>) {
+                            scope 13 (inlined without_provenance_mut::<u8>) {
+                            }
+                        }
+                        scope 14 (inlined NonNull::<u8>::as_ptr) {
+                        }
+                        scope 15 (inlined #[track_caller] std::ptr::mut_ptr::<impl *mut u8>::add) {
+                        }
+                    }
+                    scope 9 (inlined NonNull::<[u8]>::from_ref) {
+                        let mut _18: *const [u8];
+                    }
+                    scope 10 (inlined NonNull::<[u8]>::cast::<u8>) {
+                        let mut _19: *mut u8;
+                        let mut _20: *mut [u8];
+                        scope 11 (inlined NonNull::<[u8]>::as_ptr) {
+                        }
+                    }
+                }
+            }
+        }
+        scope 16 (inlined <std::slice::Iter<'_, u8> as IntoIterator>::into_iter) {
+        }
+    }
+
+    bb0: {
+        _3 = copy ((*_1).0: u64);
+        StorageLive(_15);
+        StorageLive(_12);
+        _12 = PtrMetadata(copy _2);
+        StorageLive(_13);
+        StorageLive(_14);
+        StorageLive(_18);
+        _18 = &raw const (*_2);
+        _14 = copy _18 as std::ptr::NonNull<[u8]> (Transmute);
+        StorageDead(_18);
+        StorageLive(_19);
+        StorageLive(_20);
+        _20 = copy _14 as *mut [u8] (Transmute);
+        _19 = copy _20 as *mut u8 (PtrToPtr);
+        StorageDead(_20);
+        _13 = copy _19 as std::ptr::NonNull<u8> (Transmute);
+        StorageDead(_19);
+        StorageDead(_14);
+        StorageLive(_16);
+        StorageLive(_17);
+        _17 = copy _13 as *mut u8 (Transmute);
+        _16 = Offset(copy _17, copy _12);
+        StorageDead(_17);
+        _15 = copy _16 as *const u8 (PtrToPtr);
+        StorageDead(_16);
+        _4 = std::slice::Iter::<'_, u8> { ptr: copy _13, end_or_len: copy _15, _marker: const PhantomData::<&u8> };
+        StorageDead(_13);
+        StorageDead(_12);
+        StorageDead(_15);
+        goto -> bb1;
+    }
+
+    bb1: {
+        StorageLive(_5);
+        StorageLive(_27);
+        StorageLive(_21);
+        _21 = copy (_4.0: std::ptr::NonNull<u8>);
+        StorageLive(_22);
+        _22 = copy (_4.1: *const u8);
+        StorageLive(_23);
+        StorageLive(_24);
+        _24 = copy _22 as std::ptr::NonNull<u8> (Transmute);
+        _27 = copy _21 as *mut u8 (Transmute);
+        StorageLive(_28);
+        _28 = copy _24 as *mut u8 (Transmute);
+        _23 = Eq(copy _27, copy _28);
+        StorageDead(_28);
+        switchInt(move _23) -> [0: bb3, otherwise: bb2];
+    }
+
+    bb2: {
+        StorageDead(_24);
+        StorageDead(_23);
+        StorageDead(_22);
+        StorageDead(_21);
+        StorageDead(_27);
+        StorageDead(_5);
+        StorageLive(_11);
+        _11 = FnvHasher(move _3);
+        (*_1) = move _11;
+        StorageDead(_11);
+        return;
+    }
+
+    bb3: {
+        StorageDead(_24);
+        StorageDead(_23);
+        StorageLive(_25);
+        StorageLive(_29);
+        _29 = Offset(copy _27, const 1_usize);
+        _25 = copy _29 as std::ptr::NonNull<u8> (Transmute);
+        StorageDead(_29);
+        (_4.0: std::ptr::NonNull<u8>) = move _25;
+        StorageDead(_25);
+        StorageLive(_26);
+        StorageLive(_30);
+        _30 = copy _21 as *const u8 (Transmute);
+        _26 = &(*_30);
+        StorageDead(_30);
+        _5 = Option::<&u8>::Some(copy _26);
+        StorageDead(_26);
+        StorageDead(_22);
+        StorageDead(_21);
+        StorageDead(_27);
+        StorageLive(_6);
+        _6 = copy ((_5 as Some).0: &u8);
+        StorageLive(_7);
+        _7 = copy _3;
+        StorageLive(_8);
+        StorageLive(_9);
+        _9 = copy (*_6);
+        _8 = move _9 as u64 (IntToInt);
+        StorageDead(_9);
+        _3 = BitXor(move _7, move _8);
+        StorageDead(_8);
+        StorageDead(_7);
+        StorageLive(_10);
+        _10 = Mul(copy _3, const 1099511628211_u64);
+        _3 = move _10;
+        StorageDead(_10);
+        StorageDead(_6);
+        StorageDead(_5);
+        goto -> bb1;
+    }
+}
+
+fn FnvHasher(_1: u64) -> FnvHasher {
+    let mut _0: FnvHasher;
+
+    bb0: {
+        _0 = FnvHasher(move _1);
+        return;
+    }
+}
+
+// MIR FOR CTFE
+fn FnvHasher(_1: u64) -> FnvHasher {
+    let mut _0: FnvHasher;
+
+    bb0: {
+        _0 = FnvHasher(move _1);
+        return;
+    }
+}

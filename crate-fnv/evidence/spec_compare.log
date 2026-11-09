@@ -1,0 +1,4 @@
+# cmd: /home/zhukeyu/verus-0.2026.10.04/verus-x86-linux/verus --crate-type=lib --edition 2021 --no-cheating compare.rs
+# date: Sun 08 Nov 2026 10:16:39 PM UTC
+verification results:: 14 verified, 0 errors
+# exit: 0

@@ -1,0 +1,33 @@
+# cwd: /home/zhukeyu/crate-fnv/fnv
+# cmd: /home/zhukeyu/verus-0.2026.10.04/verus-x86-linux/verus --crate-type=lib --edition 2015 --cfg feature="std" --time lib.rs
+# date: 2026-11-04T22:48:45Z
+
+verification results:: 8 verified, 0 errors
+(use --output-json for machine-readable output)
+verus-build-info
+Verus
+  Version: 0.2026.10.04.426d8b0
+  Profile: release
+  Platform: linux_x86_64
+  Toolchain: 1.98.1-x86_64-unknown-linux-gnu (overridden by environment variable RUSTUP_TOOLCHAIN)
+
+total-time:             420 ms    (estimated total cpu time 466 ms)
+    rust-time:                  55 ms
+        init-and-types:             15 ms
+        trait-conflicts:            25 ms
+        compile-time:               14 ms
+    verification-time:         358 ms
+        vir-time:                  252 ms
+            hir-time:                    4 ms
+            import-time:               193 ms
+            rust-to-vir:                21 ms
+        verify-crate-time:         105 ms
+    unaccounted-time:            6 ms
+
+verify-crate-time-breakdown
+    total verify-time:            141 ms   (2 threads)
+        total air-time:                65 ms   (2 threads)
+        total smt-time:                30 ms   (2 threads)
+            total smt-init:                 0 ms,     1160 rlimit (2 threads)
+            total smt-run:                 30 ms,   208105 rlimit (2 threads)
+# exit: 0
