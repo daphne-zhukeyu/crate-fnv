@@ -26,8 +26,7 @@ controls, builds and the write-up.
 
 ## Every claim above, with its evidence
 
-All paths are relative to `/home/zhukeyu/crate-fnv/`. Logs under `evidence/` record the exact
-command, its exit code and its full output; `evidence/INDEX.md` lists them.
+Logs under `evidence/` record the exact command, its exit code and its full output; `evidence/INDEX.md` lists them.
 
 | claim | evidence |
 |---|---|
