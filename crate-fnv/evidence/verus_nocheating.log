@@ -1,6 +1,0 @@
-# cwd: /home/zhukeyu/crate-fnv/fnv
-# cmd: /home/zhukeyu/verus-0.2026.10.04/verus-x86-linux/verus --crate-type=lib --edition 2015 --no-cheating --cfg feature="std" lib.rs
-# date: 2026-11-04T22:48:47Z
-
-verification results:: 8 verified, 0 errors
-# exit: 0

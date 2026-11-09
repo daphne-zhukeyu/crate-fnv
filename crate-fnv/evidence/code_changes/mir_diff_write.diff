@@ -1,9 +1,0 @@
---- upstream
-+++ annotated
-@@ -33,4 +33,4 @@
-                             scope 23 (inlined #[track_caller] core::num::<impl usize>::unchecked_sub) {
--                                scope 24 (inlined core::ub_checks::check_language_ub) {
--                                    scope 25 (inlined core::ub_checks::check_language_ub::runtime) {
-+                                scope 24 (inlined ub_checks::check_language_ub) {
-+                                    scope 25 (inlined ub_checks::check_language_ub::runtime) {
-                                     }
