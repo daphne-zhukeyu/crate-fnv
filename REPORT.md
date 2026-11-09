@@ -57,7 +57,7 @@ diff: `upstream.diff`. Earlier write-up with spec rationale and intent decisions
 
 ## Spec comparison notes
 
-- Gold spec written 2026-11-08, frozen as `spec_compare/human_written_spec.v1.rs`. Claude's only
+- Gold spec frozen as `spec_compare/human_written_spec.v1.rs`. Claude's only
   edit to the working copy is in the `vectors()` proof fn: `let initial = default_result()` was
   inlined into the asserts, because `by (compute)` treats a `let`-bound variable as symbolic and
   the residue sent the SMT solver over its resource limit. No definition changed.
