@@ -9,8 +9,7 @@ documentation gap: the crate never says which FNV variant it implements (it is 6
 docs say only "Fowler–Noll–Vo"), and the hash of integers written through `write_u32` etc. is
 endianness-dependent, which the docs don't mention.
 
-A hand-written gold spec of the public API (Daphne Zhu, blind, from the FNV-1a reference and the
-crate docs) was compared with Claude's spec as Verus refinement obligations in both directions,
+A hand-written gold spec of the public API was compared with Claude's spec as Verus refinement obligations in both directions,
 with Claude writing the linking proofs. The two specs cover all 4 functions; Claude's spec implies
 the gold spec for 4 of 4, and the gold spec implies Claude's for 4 of 4. The two specs are
 equivalent on the whole API.
