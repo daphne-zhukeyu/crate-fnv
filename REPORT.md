@@ -56,10 +56,6 @@ Upstream source: `upstream/` (crates.io tarball, unmodified). Annotated crate: `
 diff: `upstream.diff`. Earlier write-up with spec rationale and intent decisions:
 `VERIFICATION.md`.
 
-## Pending 
-
-1. **Sign-off.** Tick the 3 lines in `evidence/code_changes/SIGNOFF.md` (proposals in
-   `REVIEW_NOTES.md`).
 
 ## Spec comparison notes
 
