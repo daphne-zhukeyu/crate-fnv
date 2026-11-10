@@ -1,6 +1,6 @@
-# Gold spec sheet: fnv 1.0.7
+# Human spec sheet: fnv 1.0.7
 
-General guide: `/home/zhukeyu/verus-tools/GOLD_SPEC_GUIDE.md`. Output file:
+General guide: `/home/zhukeyu/verus-tools/GOLD_SPEC_GUIDE.md` (workflow step 1). Output file:
 `human_written_spec.rs` in this directory.
 
 ## Read
@@ -13,14 +13,15 @@ General guide: `/home/zhukeyu/verus-tools/GOLD_SPEC_GUIDE.md`. Output file:
 | `../upstream/README.md` | usage | nothing normative beyond the docs |
 | FNV reference: http://www.isthe.com/chongo/tech/comp/fnv/index.html, sections "FNV-1a hash" and "FNV-1a parameters" (64-bit: offset basis `14695981039346656037`, prime `1099511628211`) | the algorithm | the per-octet rule and the order of xor and multiply |
 
-Reading the body of `write` (lines 115–124, 7 lines) is acceptable here: it *is* the reference
-algorithm. Still write the spec from the reference page's wording, not from the loop.
+The body of `write` (lines 115–124, 7 lines) *is* the reference algorithm. Read it, but write
+the spec from the reference page's wording, not from the loop.
 
-## Do not read until the comparison is done
+## Claude's files
 
-`../fnv/lib.rs`, `../fnv/spec.rs` (Claude's spec), `../VERIFICATION.md`, `../REPORT.md`,
-`../evidence/DOC_REVIEW.md`, `../fnv/tests/doc_findings.rs`, `../negative_controls.sh`,
-`links.rs` and `compare.rs` in this directory.
+The human spec is written before Claude's spec and proof exist (workflow steps 1 and 2). Where
+Claude's files are already present (`../fnv/lib.rs` with its contracts, `../fnv/spec.rs`,
+`../VERIFICATION.md`, `../SUMMARY.md`, `../evidence/`, `links.rs`), leave them until the
+comparison has run, so the human spec stays an independent reference.
 
 ## Functions to specify
 
@@ -40,8 +41,8 @@ Out of scope (std defaults, not the crate's code): `write_u8`, `write_u32`, `wri
 ## Decisions the docs leave to you (write each down as a comment)
 
 1. **Variant.** FNV-1 is multiply-then-xor; FNV-1a is xor-then-multiply. Decide from the
-   reference and the vectors, and state which one you specify. (Discussed in chat on 2026-10-19:
-   not blind.)
+   reference and the vectors, and state which one you specify. (Discussed in chat on
+   2026-10-19; write your own decision down anyway.)
 2. **`with_key`.** Is `key` the raw starting state, or is it mixed/hashed in some way? The doc
    says "a state corresponding to the hash `key`".
 3. **Order of bytes.** First byte first. State it; a reversed fold has the same type.

@@ -1,6 +1,6 @@
 # Verifying `fnv` with Verus: results (2026-10-18)
 
-Crate: `fnv` 1.0.7 from crates.io (servo/rust-fnv; 876M downloads). Verus **0.2026.10.04.426d8b0** (stable) on rustc 1.98.1, with vstd `=0.0.0-2026-10-04-0306`. The annotated crate is in [`fnv/`](fnv/), the pristine crates.io sources are in [`upstream/`](upstream/), and the diff between them is [`upstream.diff`](upstream.diff). Claude (Opus 5.5) wrote the specifications on 2026-10-18 from the FNV reference page and the crate docs, before any human spec existed (see "Spec review" at the end).
+Crate: `fnv` 1.0.7 from crates.io (servo/rust-fnv; 876M downloads). Verus **0.2026.10.04.426d8b0** (stable) on rustc 1.98.1, with vstd `=0.0.0-2026-10-04-0306`. The annotated crate is in [`fnv/`](fnv/), the pristine crates.io sources are in [`upstream/`](upstream/), and the diff between them is [`upstream.diff`](upstream.diff). Claude (Opus 5.5) wrote the specifications and proofs from the FNV reference page and the crate docs; the human spec they were checked against is in [`spec_compare/`](spec_compare/) (see "Spec comparison" at the end).
 
 ## Headline
 
@@ -92,6 +92,10 @@ cargo build && cargo test && cargo test --no-default-features
 cd .. && VERUS=$(which verus) ./negative_controls.sh # 10/10 rejected
 ```
 
-## Spec review (protocol note)
+## Spec comparison
 
-Claude wrote the spec first. To keep a blind comparison possible, write your own `human_written_spec.rs` from the FNV reference page *before* reading `fnv/spec.rs`, then compare the two. For fnv the main things to check are the FNV-1a order, the prime and basis constants, the mod 2^64 multiply, the first-byte-first fold order, and the reading of `with_key`.
+The human spec of the public API is `spec_compare/human_written_spec.rs` (frozen as `.v1.rs`), written from the FNV reference page and the crate docs. Given it, Claude's spec needed no amendment; Claude wrote the linking proofs in `spec_compare/links.rs`, and the equivalence script gives 4 of 4 functions in each direction (`evidence/SPEC_COMPARE.md`). Both specs make the same choices on the FNV-1a order, the prime and basis constants, the mod 2^64 multiply, the first-byte-first fold order, and the reading of `with_key`.
+
+### Amendments
+
+None to Claude's spec or proof. The only edit to the working copy of the human spec is inside its `vectors()` harness (`let initial = …` inlined so `by (compute)` can evaluate); `diff spec_compare/human_written_spec.v1.rs spec_compare/human_written_spec.rs` shows it.
